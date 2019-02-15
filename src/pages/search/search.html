@@ -1,0 +1,30 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<ion-navbar>
+    <ion-title>Search</ion-title>
+  </ion-navbar>
+  <ion-searchbar (ionInput) = "getItems($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item *ngFor = "let animal of items">
+          <ion-thumbnail item-start>
+              <img *ngIf = "animal.ad.hasOwnProperty('thumbnail')"
+                       src = "http://img.segundamano.mx/cover/{{animal.ad.thumbnail.path}}">
+          </ion-thumbnail>
+          <h2 *ngIf = "animal.ad.hasOwnProperty('subject')">
+              {{animal.ad.subject}}
+          </h2>
+           <h2 *ngIf = "animal.ad.hasOwnProperty('list_price')">
+                  {{animal.ad.list_price.label}}
+           </h2>
+          <button ion-button clear item-end (click) = "verAnimal(animal)">View</button>
+        </ion-item>
+      </ion-list>
+</ion-content>
