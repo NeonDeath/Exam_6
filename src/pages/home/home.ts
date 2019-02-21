@@ -44,4 +44,6 @@ export class HomePage {
   {
     this.navCtrl.push(this.buscarPage, {animals: this.animals});
   }
+
+  
 }

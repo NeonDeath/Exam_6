@@ -37,4 +37,6 @@ export class DoggoPage {
    {
      this.fav.addFavoritos(this.animal);
    }
+
+   
 }

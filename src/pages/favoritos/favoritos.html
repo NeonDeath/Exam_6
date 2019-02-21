@@ -12,7 +12,7 @@
 
 <ion-content padding style = "background-color : #4A5043">
     <ion-list>
-        <ion-item style = "background-color : #8AA1B1" *ngFor = "let animal of items">
+        <ion-item style = "background-color : #8AA1B1" *ngFor = "let animal of items" (click) = "verFav(animal)">
           <ion-thumbnail item-start>
               <img *ngIf = "animal.ad.hasOwnProperty('thumbnail')"
                        src = "http://img.segundamano.mx/cover/{{animal.ad.thumbnail.path}}">

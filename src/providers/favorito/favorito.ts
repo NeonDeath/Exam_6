@@ -45,7 +45,7 @@ export class FavoritoProvider {
 
 addFavoritos(animal)
 {
-  this.favoritos.push(animal);
+  this.favoritos.push( animal);
   const toast = this.toastCtrl.create({
     message: 'Publicación agregada a favoritos ',
     duration: 3000,

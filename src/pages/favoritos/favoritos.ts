@@ -23,6 +23,7 @@ export class FavoritosPage {
   doggoPage = DoggoPage;
   gamePage = VgPage;
   jobPage = JobPage;
+  vgpage = VgPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public fav: FavoritoProvider) {
@@ -33,5 +34,12 @@ export class FavoritosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad FavoritosPage');
   }
+
+  
+verFav(animal)
+{
+    this.navCtrl.push(this.doggoPage, {animal: animal});
+}
+
 
 }

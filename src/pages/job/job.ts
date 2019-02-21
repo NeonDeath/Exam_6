@@ -32,7 +32,7 @@ export class JobPage {
     console.log('ionViewDidLoad JobPage');
   }
 
-  favoritos(empleo)
+  favoritos()
   {
     this.fav.addFavoritos(this.empleo);
   }
